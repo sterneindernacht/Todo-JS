@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+</head>
+
+<body>
+    <nav id="navigation">ToDo-List</nav>
+    <div class="todos-head-text">
+        <h1 class="todos-text">todos</h1>
+    </div>
+    <div class="todo-main">
+        <h2>ToDo List</h2>
+        <div class="adding-task">
+            <div>
+                <input id="taskInput" class="new-task" placeholder="New todo" />
+            </div>
+            <div>
+                <button id="adding-button" type="submit">Add</button>
+            </div>
+        </div>
+        <section>
+            <h2>Tasks</h2>
+            <input id="todoSearch" class="new-task" placeholder="Search for todos" type="search" />
+            <div class="todo-list" id="todoList"></div>
+            <h2>Done</h2>
+            <div class="done-tasks"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
