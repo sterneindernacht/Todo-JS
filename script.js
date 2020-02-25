@@ -19,20 +19,34 @@ function render() {
     const htmlForUndone = todos
         .filter(item => !item.isDone)
         .map(item => `
+        <div class="todo-element-bar">
             <div>
-                <h3>${item.name}</h3>
-                <input type="checkbox" ${item.isDone ? 'checked' : ''} />
+                <h6 id="date"></h6></div>
+            <div>
+                <input class="all-tasks" type="checkbox" ${item.isDone ? 'checked' : ''} id="done-checkbox">
+                <div class="all-tasks" id="tasks-all">${item.name}</div>
+                <button class="all-tasks" id="button-delete" title="delete task">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
             </div>
+        </div>
         `)
         .join('');
 
     const htmlForDone = todos
         .filter(item => item.isDone)
         .map(item => `
-             <div>
-                <h3>${item.name}</h3>
-                <input type="checkbox" ${item.isDone ? 'checked' : ''} />
-             </div>
+        <div class="todo-element-bar">
+        <div>
+            <h6 id="date"></h6></div>
+        <div>
+            <input class="all-tasks" type="checkbox" ${item.isDone ? 'checked' : ''} id="done-checkbox">
+            <div class="all-tasks" id="tasks-all">${item.name}</div>
+            <button class="all-tasks" id="button-delete" title="delete task">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
+    </div>
          `)
         .join("");
 
