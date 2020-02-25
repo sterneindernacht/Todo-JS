@@ -6,11 +6,14 @@ const todos = [
     {
         name: "Test12313",
         isDone: true
-    }
+    },
+
 ];
 
 const todoListContainer = document.querySelector('.todo-list');
 const doneListContainer = document.querySelector('.done-tasks');
+const addingButton = document.querySelector("#adding-button");
+const taskInput = document.querySelector("#taskInput");
 
 function render() {
     const htmlForUndone = todos
@@ -22,7 +25,6 @@ function render() {
             </div>
         `)
         .join('');
-    todoListContainer.innerHTML = htmlForUndone;
 
     const htmlForDone = todos
         .filter(item => item.isDone)
@@ -34,7 +36,22 @@ function render() {
          `)
         .join("");
 
+    todoListContainer.innerHTML = htmlForUndone;
     doneListContainer.innerHTML = htmlForDone;
 }
 
-render(); 
+addingButton.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (taskInput.value !== "") {
+        todos.push({
+            name: taskInput.value,
+            isDone: false
+        });
+        taskInput.value = "";
+        render();
+    }
+
+});
+
+render();
