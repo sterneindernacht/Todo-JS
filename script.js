@@ -66,6 +66,18 @@ function render() {
             render();
         });
     });
+
+    document.querySelectorAll("#done-checkbox").forEach(node => {
+        node.addEventListener("click", function (e) {
+            e.preventDefault();
+            const idToDoneList = this.closest(".todo-element-bar").getAttribute("data-id");
+            const index = todos.findIndex(x => x.id === idToDoneList);
+            todos[index].isDone = !todos[index].isDone;
+            render();
+        });
+
+
+    });
 }
 
 addingButton.addEventListener("click", function (e) {
@@ -82,7 +94,5 @@ addingButton.addEventListener("click", function (e) {
     }
 
 });
-
-
 
 render();
