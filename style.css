@@ -1,4 +1,29 @@
-body {}
+:root {
+    --primary: #673ab7;
+    --primary-light: #9a67ea;
+    --primary-dark: #320b86;
+    --secondary: #1976d2;
+    --secondary-light: #63a4ff;
+    --secondary-dark: #004ba0;
+    --text: #4d4d4d;
+    --primary-text: #fff;
+    --secondary-text: #fff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f9f9f9;
+    color: var(--text);
+}
+
+* {
+    box-sizing: border-box;
+}
 
 #navigation {
     background: var(--primary);
@@ -11,4 +36,96 @@ body {}
     padding-left: 40px;
     box-shadow: 0px 0px 3px 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.todos-head-text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 150px;
+    text-align: center;
+}
+
+.todos-text {
+    font-weight: 100;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.25);
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    font: 100px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.todo-main {
+    background: #fff;
+    width: 600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+#adding-button {
+    margin-top: 10px;
+    padding: 7px 18px;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.new-task {
+    background: no-repeat;
+    background-color: white;
+    height: 30px;
+    resize: none;
+    font-size: 18px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.all-tasks {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    display: inline-block;
+}
+
+#button-delete {
+    width: auto;
+    padding-left: 0px;
+}
+
+.todo-element-bar {
+    text-align: left;
+}
+
+#tasks-all {
+    width: 400;
+}
+
+.all-tasks {
+    font-size: 22px;
+}
+
+#done-checkbox {
+    width: 40px;
+    padding-right: 25px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px
+}
+
+#date {
+    margin: 19px 13px 3px;
+    padding-top: 25px;
 }
