@@ -16,6 +16,7 @@ const todoListContainer = document.querySelector('.todo-list');
 const doneListContainer = document.querySelector('.done-tasks');
 const addingButton = document.querySelector("#adding-button");
 const taskInput = document.querySelector("#taskInput");
+const todoSearch = document.querySelector("#todoSearch");
 
 
 function render() {
@@ -92,6 +93,24 @@ addingButton.addEventListener("click", function (e) {
         taskInput.value = "";
         render();
     }
+
+});
+
+todoSearch.addEventListener("input", function (e) {
+    const valueText = this.value;
+    const allElements = todoList.querySelectorAll(".todo-element-bar");
+
+    allElements.forEach(element => {
+        const text = element.querySelector("#tasks-all").innerText;
+
+        if (text.indexOf(valueText) !== -1) {
+            element.style.setProperty("display", "");
+
+        } else {
+            element.style.setProperty("display", "none");
+        }
+
+    });
 
 });
 
