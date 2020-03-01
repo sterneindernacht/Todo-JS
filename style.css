@@ -124,3 +124,7 @@ body {
     width: 30px;
     display: inline-block;
 }
+
+#deleteButton>svg {
+    margin-left: -9px;
+}
